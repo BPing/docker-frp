@@ -2,21 +2,30 @@
 
    docker run frps
 
-# 使用
+# Usage
 
-### docker:使用编译好的镜像
+### docker run
 
 ```
-  docker run -td  -p 7000:7000 -p 8080:8080 -p 7500:7500 cbping/docker-frps
+  docker run -td  -p 7000:7000 -p 8080:8080 -p 7500:7500 cbping/frps
 ```
 
-### compose：本地重新编译启动
+To build the image, simply invoke
 
-**配置**
+     docker build --build-arg bind_port=7000 vhost_http_port=8080 dashboard_port=7500 github.com/Bping/docker-frps
 
-* `.env` 里面的端口配置务必一一对应`frp/frps/frps.ini` 里的端口配置
+A prebuilt container is also available in the docker index
 
-**启动**
+    docker pull cbping/frps
+
+
+### compose
+
+**config**
+
+    The `.env` and `frp/frps/frps.ini` configuration ports must be consistent
+
+**start**
 
 ```
   docker-compose up -d
