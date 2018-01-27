@@ -12,7 +12,7 @@
 
 To build the image, simply invoke
 
-     docker build --build-arg bind_port=7000 vhost_http_port=8080 dashboard_port=7500 github.com/Bping/docker-frps
+     docker build --build-arg bind_port=7000 vhost_http_port=8080 dashboard_port=7500 github.com/Bping/docker-frps cbping/frps
 
 A prebuilt container is also available in the docker index
 
