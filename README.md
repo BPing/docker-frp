@@ -1,6 +1,6 @@
 # docker-frp
 
-   frp docker image
+   docker run frps
 
 # 使用
 
