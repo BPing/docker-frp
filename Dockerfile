@@ -3,8 +3,8 @@ MAINTAINER cbping  452775680@qq.com
 
 WORKDIR /opt/frp
 
-COPY frps /opt/frp/
-COPY frps.ini /opt/frp/
+COPY frp/frps/frps /opt/frp/
+COPY frp/frps/frps.ini /opt/frp/
 
 RUN chmod 770 -R /opt/frp/
 
