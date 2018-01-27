@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  frps:
+    build:
+       context: .
+       dockerfile: Dockerfile
+       args:
+         - vhost_http_port=${vhost_http_port}
+         - bind_port=${bind_port}
+    container_name: frps
+    ports:
+       - ${vhost_http_port}:${vhost_http_port}
+       - ${bind_port}:${bind_port}
+       - ${dashboard_port}:${dashboard_port}
