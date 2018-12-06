@@ -10,6 +10,7 @@ services:
          bind_port: ${bind_port}
          dashboard_port: ${dashboard_port}
     container_name: frps
+    restart: ${restart}
     ports:
        - ${vhost_http_port}:${vhost_http_port}
        - ${bind_port}:${bind_port}
