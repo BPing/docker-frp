@@ -4,7 +4,7 @@ MAINTAINER cbping  452775680@qq.com
 WORKDIR /opt/frp
 
 COPY frp/frps_0210/frps /opt/frp/
-COPY frp/frps_0210/frps.ini /opt/frp/config/
+COPY frp/frps_0210/frps.ini /opt/frp/
 
 
 RUN chmod 770 -R /opt/frp/
@@ -16,4 +16,4 @@ ARG dashboard_port=7500
 EXPOSE $bind_port $vhost_http_port $dashboard_port
 
 ENTRYPOINT ["./frps"]
-CMD ["-c","./config/frps.ini"]
+CMD ["-c","./frps.ini"]
